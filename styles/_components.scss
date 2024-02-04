@@ -90,7 +90,7 @@
   @include centered;
   flex-direction: row-reverse;
   > .more-text {
-    padding-left: $spacing * 3;
+    padding:0  $spacing * 3;
   }
   > .right-design {
     max-width: 20%;
@@ -208,4 +208,40 @@ padding-top: $spacing;
   border-radius: 50%;
 }
 
+}
+
+.container-graphic{
+background-color: $light_bg_color;
+@include parent_width;
+@include centered;
+min-height: 40vh;
+
+
+ .graphic-intro{
+
+max-width: 100%;
+padding: $spacing * 3;
+
+ }
+
+ >img{
+
+max-width: 10%;
+
+
+ }
+}
+
+.design-container{
+@include parent_width;
+min-height: 80vh;
+background-color:$light_green_color ;
+
+>.design-works{
+
+max-width: 80%;
+display: grid;
+
+
+}
 }
