@@ -236,12 +236,42 @@ max-width: 10%;
 @include parent_width;
 min-height: 80vh;
 background-color:$light_green_color ;
+position: relative;
 
 >.design-works{
 
-max-width: 80%;
-display: grid;
+.gol1{
+max-width: 5%;
+bottom: 3em;
 
+}
+
+.gol2{
+
+  max-width: 10%;
+  top:2em;
+  right: 
+  3.5em;
+}
+
+.gol3{
+max-width: 10%;
+  bottom: 3.5em;
+  left: 3em;
+}
+
+.gol4{
+
+
+  max-width: 5%;
+  top: 2em;
+  right: 2em;
+}
+>img{
+
+position: absolute;
+
+}
 
 }
 }
