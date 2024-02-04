@@ -1,0 +1,206 @@
+.header-wrapper {
+  @include parent_width;
+  @include centered(space-between);
+  padding: $spacing * 2.5 3em;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  > h1 {
+    font-size: 2em;
+  }
+
+  > nav > .header-nav {
+    @include centered;
+    gap: $spacing * 1.3;
+
+    > li > a {
+      color: $primary_text_color;
+    }
+  }
+
+  > .header-links {
+    @include centered;
+    > button {
+      @include button;
+      &:hover {
+        @include hover;
+      }
+    }
+
+    > a > i {
+      color: $primary_text_color;
+      padding: 0 $spacer;
+      font-size: 1.5em;
+    }
+  }
+}
+
+.main-background {
+  @include parent_width;
+  > img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.intro-wrapper {
+  @include parent_width;
+  position: relative;
+  .intro-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    max-width: 70%;
+    @include centered(space-around);
+    @include marginAuto();
+    > .introduce {
+      text-align: right;
+      max-width: 50%;
+      > h2 {
+        padding-bottom: $spacing;
+      }
+      > p {
+        padding-bottom: 1em;
+      }
+
+      > button {
+        @include button;
+        &:hover {
+          @include hover;
+        }
+      }
+    }
+    > img {
+      max-width: 40%;
+      border-radius: 40% 40% 0 0;
+      object-fit: contain;
+    }
+  }
+}
+
+.more-info {
+  background-color: $dark_bg_color;
+  min-height: 50vh;
+  max-width: 100%;
+  @include centered;
+  flex-direction: row-reverse;
+  > .more-text {
+    padding-left: $spacing * 3;
+  }
+  > .right-design {
+    max-width: 20%;
+    position: relative;
+
+    > img {
+      width: 100%;
+    }
+  }
+}
+
+.container3 {
+  background-color: $light_bg_color;
+  text-align: center;
+  min-height: 60vh;
+
+  > div {
+    padding: 5em 3em;
+  }
+}
+
+.my-skills {
+  @include parent_width();
+  @include centered();
+  padding: $large_spacing 3em;
+  gap: $spacing * 2;
+
+  @media screen and (max-width: 1024px) {
+    flex-wrap: wrap;
+  }
+  > .skill {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 6em;
+    color: $light_primary_color;
+    font-size: 1em;
+    text-transform: uppercase;
+    overflow: hidden;
+    @media screen and (max-width: 1024px) {
+      width: 150px;
+      height: 150px;
+    }
+  }
+}
+
+.my-skills {
+  .html {
+    background-image: conic-gradient(
+      $chart_color1 0deg,
+      $chart_color1 350deg,
+      $light_bg_color 270deg
+    );
+  }
+
+  .css {
+    background-image: conic-gradient(
+      $chart_color2 0deg,
+      $chart_color2 340deg,
+      $light_bg_color 270deg
+    );
+  }
+
+  .sass {
+    background-image: conic-gradient(
+      $chart_color3 0deg,
+      $chart_color3 310deg,
+      $light_bg_color 270deg
+    );
+  }
+
+  .javascript {
+    background-image: conic-gradient(
+      $chart_color4 0deg,
+      $chart_color4 270deg,
+      $light_bg_color 270deg
+    );
+  }
+}
+
+.myworks-container {
+  padding: $large_spacing 0;
+  max-width: 100%;
+  min-height: 80vh;
+  background-color: $dark_bg_color;
+  position: relative;
+
+  > img {
+    max-width: 15%;
+    padding-top: $large_spacing * 2;
+  }
+
+  > .web-works {
+    @include centered;
+    @include absolute(0, 0, 0, 0);
+    @include marginAuto();
+    flex-direction: column;
+    max-width: 80%;
+    > p {
+      padding-bottom: $spacing;
+    }
+    > img {
+      max-width: 70%;
+      border-radius: $spacing $spacing;
+      box-shadow: 0 0 10px $light_primary_color;
+
+      @media screen and (max-width: 1441px) {
+        max-width: 100%;
+      }
+    }
+  }
+}

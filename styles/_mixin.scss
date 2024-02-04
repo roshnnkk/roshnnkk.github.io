@@ -1,0 +1,42 @@
+@mixin centered($justify-content: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: center;
+  
+}
+
+@mixin parent_width() {
+  max-width: 100vw;
+}
+
+@mixin button() {
+  color: $light_primary_color;
+  background-color: $button_color;
+  padding: 1em;
+  border-radius: $spacer;
+  border: 2px solid $button_color;
+}
+
+@mixin hover() {
+  background-color: $light_primary_color;
+  color: $primary_text_color;
+  border: 2px solid $button_color;
+  transition: 0.4s;
+}
+
+@mixin absolute($top:0, $right:0, $bottom:0, $left:0) {
+
+position: absolute;
+top:$top;
+right: $right;
+bottom: $bottom;
+left: $left;
+}
+
+
+@mixin marginAuto(){
+
+margin-left: auto;
+margin-right: auto;
+
+}

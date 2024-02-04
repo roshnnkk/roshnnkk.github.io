@@ -1,0 +1,43 @@
+body {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Belleza", sans-serif;
+  font-size: clamp(1rem, 1rem + 2vw, 3rem);
+  text-transform: capitalize;
+
+  @media screen and (max-width: 1293px) {
+    font-size: clamp(1rem, 1rem + 1vw, 3rem);
+  }
+}
+
+header,
+button {
+  text-transform: uppercase;
+}
+
+button {
+  letter-spacing: 1.5px;
+  cursor: pointer;
+
+
+
+
+}
+
+p {
+  color: $secondary_text_color;
+  font-size: 20px;
+  @media screen and (max-width: 1029px) {
+    font-size: 1rem;
+  }
+}
