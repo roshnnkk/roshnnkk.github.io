@@ -54,6 +54,7 @@ button {
 button {
   letter-spacing: 1.5px;
   cursor: pointer;
+  background-color: transparent;
 }
 
 p {
@@ -248,21 +249,11 @@ p {
   max-width: 100%;
   min-height: 80vh;
   background-color: #f5dfd3;
-  position: relative;
-}
-.myworks-container > img {
-  max-width: 15%;
-  padding-top: 8em;
 }
 .myworks-container > .web-works {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   margin-left: auto;
   margin-right: auto;
   flex-direction: column;
@@ -280,4 +271,14 @@ p {
   .myworks-container > .web-works > img {
     max-width: 100%;
   }
+}
+
+.buttons-changing {
+  padding-top: 1em;
+}
+.buttons-changing > button i {
+  font-size: 2em;
+  background-color: #ae9a70;
+  padding: 0.2em 0.3em;
+  border-radius: 50%;
 }

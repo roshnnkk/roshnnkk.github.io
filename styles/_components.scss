@@ -177,16 +177,10 @@
   max-width: 100%;
   min-height: 80vh;
   background-color: $dark_bg_color;
-  position: relative;
-
-  > img {
-    max-width: 15%;
-    padding-top: $large_spacing * 2;
-  }
+  
 
   > .web-works {
     @include centered;
-    @include absolute(0, 0, 0, 0);
     @include marginAuto();
     flex-direction: column;
     max-width: 80%;
@@ -203,4 +197,15 @@
       }
     }
   }
+}
+
+.buttons-changing {
+padding-top: $spacing;
+>button i {
+  font-size: 2em;
+  background-color:$secondary_button_color ;
+  padding: 0.2em 0.3em;
+  border-radius: 50%;
+}
+
 }
