@@ -9,21 +9,86 @@
   right: 0;
   z-index: 1;
 
+  .hamburger-menu {
+    display: none;
+
+    @media screen and (max-width: 1023px) {
+      display: block;
+    }
+    width: 35px;
+    height: 35px;
+    position: relative;
+    > span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      width: 100%;
+      background-color: $primary_text_color;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      width: 100%;
+      background-color: $primary_text_color;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 1.5px);
+      left: 0;
+      right: 0;
+      height: 3px;
+      width: 100%;
+      background-color: $primary_text_color;
+    }
+  }
+
   > h1 {
     font-size: 2em;
   }
 
-  > nav > .header-nav {
-    @include centered;
-    gap: $spacing * 1.3;
+  > nav {
+    position: relative;
 
-    > li > a {
-      color: $primary_text_color;
+    > .header-nav {
+      @include centered;
+      gap: $spacing * 1.3;
+
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
+
+      > li > a {
+        color: $primary_text_color;
+        // &::after {
+        //   content: "";
+        //   background-color: aqua;
+        //   width: 100%;
+        //   height: 3px;
+        //   position: absolute;
+        //   bottom: 0;
+        //   left: 0;
+        //   right: 0;
+        //   padding: 0 3em;
+        // }
+      }
     }
   }
 
   > .header-links {
     @include centered;
+
+    @media screen and (max-width: 1023px) {
+      display: none;
+    }
     > button {
       @include button;
       &:hover {
@@ -41,26 +106,32 @@
 
 .main-background {
   @include parent_width;
-  > img {
-    width: 100%;
-    object-fit: contain;
-  }
+  background-image: url(../assets/background.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .intro-wrapper {
   @include parent_width;
-  position: relative;
+
   .intro-container {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
     max-width: 70%;
     @include centered(space-around);
     @include marginAuto();
+    padding: $large_spacing * 2 0;
+    @media screen and (max-width: 819px) {
+      flex-direction: column-reverse;
+    }
+
     > .introduce {
       text-align: right;
       max-width: 50%;
+      @media screen and (max-width: 819px) {
+        max-width: fit-content;
+        text-align: center;
+      }
+
       > h2 {
         padding-bottom: $spacing;
       }
@@ -72,6 +143,10 @@
         @include button;
         &:hover {
           @include hover;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 10px;
         }
       }
     }
@@ -90,11 +165,14 @@
   @include centered;
   flex-direction: row-reverse;
   > .more-text {
-    padding:0  $spacing * 3;
+    padding: 0 $spacing * 3;
+
+    @media screen and (max-width: 502px) {
+      padding: $spacing $spacing * 3;
+    }
   }
   > .right-design {
     max-width: 20%;
-    position: relative;
 
     > img {
       width: 100%;
@@ -108,7 +186,7 @@
   min-height: 60vh;
 
   > div {
-    padding: 5em 3em;
+    padding: $large_spacing $spacing 0 $spacing;
   }
 }
 
@@ -175,9 +253,7 @@
 .myworks-container {
   padding: $large_spacing 0;
   max-width: 100%;
-  min-height: 80vh;
   background-color: $dark_bg_color;
-  
 
   > .web-works {
     @include centered;
@@ -186,6 +262,7 @@
     max-width: 80%;
     > p {
       padding-bottom: $spacing;
+      text-align: center;
     }
     > img {
       max-width: 70%;
@@ -200,78 +277,65 @@
 }
 
 .buttons-changing {
-padding-top: $spacing;
->button i {
-  font-size: 2em;
-  background-color:$secondary_button_color ;
-  padding: 0.2em 0.3em;
-  border-radius: 50%;
+  padding-top: $spacing;
+  > button i {
+    font-size: 2em;
+    background-color: $secondary_button_color;
+    padding: 0.2em 0.3em;
+    border-radius: 50%;
+  }
 }
 
+.container-graphic {
+  background-color: $light_bg_color;
+  @include parent_width;
+  @include centered(flex-start);
+  min-height: 40vh;
+
+  .graphic-intro {
+    max-width: 80%;
+    padding: $spacing * 3;
+  }
+
+  > img {
+    max-width: 10%;
+  }
 }
 
-.container-graphic{
-background-color: $light_bg_color;
-@include parent_width;
-@include centered;
-min-height: 40vh;
+.my-design-works {
+  @include parent_width;
+  @include centered();
+  flex-direction: column;
+  text-align: center;
+  min-height: 50vh;
+  background-color: $light_green_color;
+
+  > h4 {
+    padding-top: $spacing * 2;
+  }
+
+  > p {
+    padding: 0 $spacing * 3;
+  }
+  > .design-items {
+    padding: $spacing * 3 $spacing * 3;
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: $spacing;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 600px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    > img {
+      width: 100%;
 
 
- .graphic-intro{
-
-max-width: 100%;
-padding: $spacing * 3;
-
- }
-
- >img{
-
-max-width: 10%;
-
-
- }
-}
-
-.design-container{
-@include parent_width;
-min-height: 80vh;
-background-color:$light_green_color ;
-position: relative;
-
->.design-works{
-
-.gol1{
-max-width: 5%;
-bottom: 3em;
-
-}
-
-.gol2{
-
-  max-width: 10%;
-  top:2em;
-  right: 
-  3.5em;
-}
-
-.gol3{
-max-width: 10%;
-  bottom: 3.5em;
-  left: 3em;
-}
-
-.gol4{
-
-
-  max-width: 5%;
-  top: 2em;
-  right: 2em;
-}
->img{
-
-position: absolute;
-
-}
-
-}
+    }
+  }
 }

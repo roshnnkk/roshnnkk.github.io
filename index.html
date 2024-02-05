@@ -15,13 +15,15 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="./styles/animate.min.css"
+    />
     <link rel="stylesheet" href="./styles/style.css" />
     <title>portfolio</title>
   </head>
   <body>
     <div class="main-background">
-      <img src="./assets/background.png" />
-
       <header>
         <section class="header-wrapper">
           <h1>portfolio</h1>
@@ -43,109 +45,123 @@
             <a href="."><i class="fa-brands fa-youtube"></i></a>
             <button type="button">get in touch</button>
           </div>
+
+          <div class="hamburger-menu">
+            <span></span>
+          </div>
         </section>
       </header>
 
-      <main>
-        <div class="intro-wrapper">
-          <section class="intro-container">
-            <div class="introduce">
-              <h2>web Developer , creative Designer & Photographer</h2>
-              <p>
-                Hi, my name is Roshanak and I am a front-end web developer with
-                over 10 years of experience in modern web development practices.
-                I am passionate about creating beautiful websites that are easy
-                to use and can be accessed by anyone.
-              </p>
-              <button type="button">when do we begin</button>
-            </div>
-
-            <img src="./assets/1.jpg" />
-          </section>
-        </div>
-        <section class="more-info">
-          <div class="right-design">
-            <img src="./assets/2d.png" />
-          </div>
-          <div class="more-text">
-            <h3>more about me</h3>
+      <div class="intro-wrapper">
+        <section class="intro-container">
+          <div class="introduce">
+            <h2>web Developer , creative Designer & Photographer</h2>
             <p>
-              Since beginning my journey as a freelance designer 2 years ago,
-              I've done remote work for agencies, consulted for startups, and
-              collaborated with talented people to create digital products for
-              both business and consumer use. I'm quietly confident, naturally
-              curious, and perpetually working on improving my chops.
+              Hi, my name is Roshanak and I am a front-end web developer with
+              over 10 years of experience in modern web development practices. I
+              am passionate about creating beautiful websites that are easy to
+              use and can be accessed by anyone.
             </p>
+            <button type="button">when do we begin</button>
+          </div>
+
+          <img src="./assets/1.jpg" />
+        </section>
+      </div>
+    </div>
+    <main>
+      <section class="more-info ">
+        <div class="right-design">
+          <img src="./assets/2d.png" />
+        </div>
+        <div class="more-text">
+          <h3 class=" wow animate__animated animate__fadeInDown" >more about me</h3>
+          <p class=" wow animate__animated animate__fadeInDown animate__delay-1s" >
+            Since beginning my journey as a freelance designer 2 years ago, I've
+            done remote work for agencies, consulted for startups, and
+            collaborated with talented people to create digital products for
+            both business and consumer use. I'm quietly confident, naturally
+            curious, and perpetually working on improving my chops.
+          </p>
+        </div>
+      </section>
+      <div class="container3">
+        <div class="texts">
+          <h3 class=" wow animate__animated animate__fadeInDown " >here are my skills</h3>
+          <p class=" wow animate__animated animate__fadeInDown animate__delay-1s" >My skills are a reflection of my passion for excellence</p>
+        </div>
+
+        <section class="my-skills">
+          <div class=" wow animate__animated animate__pulse animate__delay-1s skill html">
+            <div class="pie-slice"></div>
+            html
+          </div>
+          <div class=" wow animate__animated animate__pulse animate__delay-1s skill css">
+            <div class="pie-slice"></div>
+            css
+          </div>
+          <div class=" wow animate__animated animate__pulse animate__delay-1s skill sass">
+            <div class="pie-slice"></div>
+            sass
+          </div>
+
+          <div class=" wow animate__animated animate__pulse animate__delay-1s skill javascript">
+            <div class="pie-slice"></div>
+            java script
           </div>
         </section>
-        <div class="container3">
-          <div class="texts">
-            <h3>here are my skills</h3>
-            <p>My skills are a reflection of my passion for excellence</p>
+      </div>
+
+      <div class="myworks-container">
+        <section class="web-works">
+          <h3 class=" wow animate__animated animate__fadeInDown">what I have done till now</h3>
+          <p class=" wow animate__animated animate__fadeInDown animate__delay-1s" >Here you can see some of my projects as a front-end developer</p>
+          <img src="./assets/mywork1.png" alt="my works" />
+          <div class="buttons-changing">
+            <button class="back-btn" type="button">
+              <i class="fa-solid fa-caret-left"></i>
+            </button>
+            <button class="next-btn" type="button">
+              <i class="fa-solid fa-caret-right"></i>
+            </button>
           </div>
+        </section>
+      </div>
 
-          <section class="my-skills">
-            <div class="skill html">
-              <div class="pie-slice"></div>
-              html
-            </div>
-            <div class="skill css">
-              <div class="pie-slice"></div>
-              css
-            </div>
-            <div class="skill sass">
-              <div class="pie-slice"></div>
-              sass
-            </div>
+      <div class="container-graphic">
+        <img src="./assets/3d.png" />
+        <section class="graphic-intro">
+          <h3 class=" wow animate__animated animate__fadeInDown">graphic design</h3>
+          <p class=" wow animate__animated animate__fadeInDown animate__delay-1s">
+            As a graphic designer, I specialize in creating visually stunning
+            and effective designs for a variety of media, including print,
+            digital, and branding. With a passion for creativity and
+            problem-solving, I approach each project with a focus on
+            understanding the client's needs and delivering exceptional results.
+          </p>
+        </section>
+      </div>
 
-            <div class="skill javascript">
-              <div class="pie-slice"></div>
-              java script
-            </div>
-          </section>
+      <section class="my-design-works">
+        <h4>my design works</h4>
+        <p>Here you can see some of my designs for social media</p>
+
+        <div   class="design-items  ">
+          <img class="wow animate__animated animate__flipInX animate__slow" src="./assets/c1.jpg" />
+          <img class="wow animate__animated animate__flipInX animate__slow" src="./assets/c2.jpg" />
+          <img class="wow animate__animated animate__flipInX animate__slow" src="./assets/c3.jpg" />
+          <img class="wow animate__animated animate__flipInX animate__slow" src="./assets/g1.jpg" />
+          <img class="wow animate__animated animate__flipInX animate__slow" src="./assets/g2.jpg" />
+          <img class="wow animate__animated animate__flipInX animate__slow" src="./assets/g3.jpg" />
         </div>
+      </section>
+    </main>
 
-        <div class="myworks-container">
-          <section class="web-works">
-            <h3>what I have done till now</h3>
-            <p>Here you can see some of my projects as a front-end developer</p>
-            <img src="./assets/mywork1.png" alt="my works" />
-            <div class="buttons-changing">
-              <button class="back-btn" type="button">
-                <i class="fa-solid fa-caret-left"></i>
-              </button>
-              <button class="next-btn" type="button">
-                <i class="fa-solid fa-caret-right"></i>
-              </button>
-            </div>
-          </section>
-        </div>
+    <script src="wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
 
-        <div class="container-graphic">
-          <img src="./assets/3d.png" />
-          <section class="graphic-intro">
-            <h3>graphic design</h3>
-            <p>
-              As a graphic designer, I specialize in creating visually stunning
-              and effective designs for a variety of media, including print,
-              digital, and branding. With a passion for creativity and
-              problem-solving, I approach each project with a focus on
-              understanding the client's needs and delivering exceptional
-              results.
-            </p>
-          </section>
-        </div>
-
-        <div class="design-container">
-          <section class="design-works">
-            <img src="./assets/gol1.png" class="gol1"/>
-            <img src="./assets/gol2.png" class="gol2" />
-            <img src="./assets/gol3.png" class="gol3" />
-            <img src="./assets/gol4.png" class="gol4" />
-          </section>
-        </div>
-      </main>
-    </div>
     <script
       src="https://kit.fontawesome.com/9ad2b66f2e.js"
       crossorigin="anonymous"
