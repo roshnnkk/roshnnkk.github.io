@@ -68,17 +68,6 @@
 
       > li > a {
         color: $primary_text_color;
-        // &::after {
-        //   content: "";
-        //   background-color: aqua;
-        //   width: 100%;
-        //   height: 3px;
-        //   position: absolute;
-        //   bottom: 0;
-        //   left: 0;
-        //   right: 0;
-        //   padding: 0 3em;
-        // }
       }
     }
   }
@@ -250,7 +239,7 @@
   }
 }
 
-.myworks-container {
+.myWorks-container {
   padding: $large_spacing 0;
   max-width: 100%;
   background-color: $dark_bg_color;
@@ -334,8 +323,79 @@
 
     > img {
       width: 100%;
-
-
     }
+  }
+}
+
+.hamburger-container {
+  display: none;
+  max-width: 100vw;
+  position: relative;
+  > .hamburger-menu-inside {
+    width: 30%;
+    min-height: 600px;
+    background-color: rgba(255, 255, 255, 0.693);
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    > nav > .hamburger-nav {
+      text-align: center;
+      padding: $spacing * 8 $spacing;
+
+      > li {
+        padding: $spacing 0;
+        > a {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+
+ 
+
+
+.change-button{
+  width: 35px;
+  height: 35px;
+  position: relative;
+  > span {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    width: 50%;
+    background-color: $primary_text_color;
+    transform: rotate(24deg) translate(18px ,-2px);
+    transform-origin: right;
+    transition-duration: 0.5s;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    width: 50%;
+    background-color: $primary_text_color;
+    transform: rotate(-27deg) translate(18px ,2px);
+    transform-origin: right;
+    transition-duration: 0.5s;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1.5px);
+    left: 0;
+    right: 0;
+    height: 3px;
+    width: 100%;
+    background-color: $primary_text_color;
   }
 }

@@ -15,10 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="./styles/animate.min.css"
-    />
+    <link rel="stylesheet" href="./styles/animate.min.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <title>portfolio</title>
   </head>
@@ -46,10 +43,22 @@
             <button type="button">get in touch</button>
           </div>
 
-          <div class="hamburger-menu">
+          <div class="hamburger-menu " id="hamburger-btn" onclick="openHamburgerMenu();closeHamburgerMenu()">
             <span></span>
           </div>
         </section>
+        <div class="hamburger-container" id="hamburger-show">
+          <div class="hamburger-menu-inside">
+            <nav>
+              <ul class="hamburger-nav">
+                <li><a href="-">home</a></li>
+                <li><a href="-">work</a></li>
+                <li><a href="-">profile</a></li>
+                <li><a href="-">contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </header>
 
       <div class="intro-wrapper">
@@ -70,13 +79,17 @@
       </div>
     </div>
     <main>
-      <section class="more-info ">
+      <section class="more-info">
         <div class="right-design">
           <img src="./assets/2d.png" />
         </div>
         <div class="more-text">
-          <h3 class=" wow animate__animated animate__fadeInDown" >more about me</h3>
-          <p class=" wow animate__animated animate__fadeInDown animate__delay-1s" >
+          <h3 class="wow animate__animated animate__fadeInDown">
+            more about me
+          </h3>
+          <p
+            class="wow animate__animated animate__fadeInDown animate__delay-1s"
+          >
             Since beginning my journey as a freelance designer 2 years ago, I've
             done remote work for agencies, consulted for startups, and
             collaborated with talented people to create digital products for
@@ -87,35 +100,55 @@
       </section>
       <div class="container3">
         <div class="texts">
-          <h3 class=" wow animate__animated animate__fadeInDown " >here are my skills</h3>
-          <p class=" wow animate__animated animate__fadeInDown animate__delay-1s" >My skills are a reflection of my passion for excellence</p>
+          <h3 class="wow animate__animated animate__fadeInDown">
+            here are my skills
+          </h3>
+          <p
+            class="wow animate__animated animate__fadeInDown animate__delay-1s"
+          >
+            My skills are a reflection of my passion for excellence
+          </p>
         </div>
 
         <section class="my-skills">
-          <div class=" wow animate__animated animate__pulse animate__delay-1s skill html">
+          <div
+            class="wow animate__animated animate__pulse animate__delay-1s skill html"
+          >
             <div class="pie-slice"></div>
             html
           </div>
-          <div class=" wow animate__animated animate__pulse animate__delay-1s skill css">
+          <div
+            class="wow animate__animated animate__pulse animate__delay-1s skill css"
+          >
             <div class="pie-slice"></div>
             css
           </div>
-          <div class=" wow animate__animated animate__pulse animate__delay-1s skill sass">
+          <div
+            class="wow animate__animated animate__pulse animate__delay-1s skill sass"
+          >
             <div class="pie-slice"></div>
             sass
           </div>
 
-          <div class=" wow animate__animated animate__pulse animate__delay-1s skill javascript">
+          <div
+            class="wow animate__animated animate__pulse animate__delay-1s skill javascript"
+          >
             <div class="pie-slice"></div>
             java script
           </div>
         </section>
       </div>
 
-      <div class="myworks-container">
+      <div class="myWorks-container">
         <section class="web-works">
-          <h3 class=" wow animate__animated animate__fadeInDown">what I have done till now</h3>
-          <p class=" wow animate__animated animate__fadeInDown animate__delay-1s" >Here you can see some of my projects as a front-end developer</p>
+          <h3 class="wow animate__animated animate__fadeInDown">
+            what I have done till now
+          </h3>
+          <p
+            class="wow animate__animated animate__fadeInDown animate__delay-1s"
+          >
+            Here you can see some of my projects as a front-end developer
+          </p>
           <img src="./assets/mywork1.png" alt="my works" />
           <div class="buttons-changing">
             <button class="back-btn" type="button">
@@ -131,8 +164,12 @@
       <div class="container-graphic">
         <img src="./assets/3d.png" />
         <section class="graphic-intro">
-          <h3 class=" wow animate__animated animate__fadeInDown">graphic design</h3>
-          <p class=" wow animate__animated animate__fadeInDown animate__delay-1s">
+          <h3 class="wow animate__animated animate__fadeInDown">
+            graphic design
+          </h3>
+          <p
+            class="wow animate__animated animate__fadeInDown animate__delay-1s"
+          >
             As a graphic designer, I specialize in creating visually stunning
             and effective designs for a variety of media, including print,
             digital, and branding. With a passion for creativity and
@@ -146,13 +183,31 @@
         <h4>my design works</h4>
         <p>Here you can see some of my designs for social media</p>
 
-        <div   class="design-items  ">
-          <img class="wow animate__animated animate__flipInX animate__slow" src="./assets/c1.jpg" />
-          <img class="wow animate__animated animate__flipInX animate__slow" src="./assets/c2.jpg" />
-          <img class="wow animate__animated animate__flipInX animate__slow" src="./assets/c3.jpg" />
-          <img class="wow animate__animated animate__flipInX animate__slow" src="./assets/g1.jpg" />
-          <img class="wow animate__animated animate__flipInX animate__slow" src="./assets/g2.jpg" />
-          <img class="wow animate__animated animate__flipInX animate__slow" src="./assets/g3.jpg" />
+        <div class="design-items">
+          <img
+            class="wow animate__animated animate__flipInX animate__slow"
+            src="./assets/c1.jpg"
+          />
+          <img
+            class="wow animate__animated animate__flipInX animate__slow"
+            src="./assets/c2.jpg"
+          />
+          <img
+            class="wow animate__animated animate__flipInX animate__slow"
+            src="./assets/c3.jpg"
+          />
+          <img
+            class="wow animate__animated animate__flipInX animate__slow"
+            src="./assets/g1.jpg"
+          />
+          <img
+            class="wow animate__animated animate__flipInX animate__slow"
+            src="./assets/g2.jpg"
+          />
+          <img
+            class="wow animate__animated animate__flipInX animate__slow"
+            src="./assets/g3.jpg"
+          />
         </div>
       </section>
     </main>
@@ -166,5 +221,7 @@
       src="https://kit.fontawesome.com/9ad2b66f2e.js"
       crossorigin="anonymous"
     ></script>
+
+    <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
