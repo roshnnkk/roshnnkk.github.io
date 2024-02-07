@@ -353,11 +353,7 @@
   }
 }
 
-
- 
-
-
-.change-button{
+.change-button {
   width: 35px;
   height: 35px;
   position: relative;
@@ -369,7 +365,7 @@
     height: 3px;
     width: 50%;
     background-color: $primary_text_color;
-    transform: rotate(24deg) translate(18px ,-2px);
+    transform: rotate(24deg) translate(18px, -2px);
     transform-origin: right;
     transition-duration: 0.5s;
   }
@@ -383,7 +379,7 @@
     height: 3px;
     width: 50%;
     background-color: $primary_text_color;
-    transform: rotate(-27deg) translate(18px ,2px);
+    transform: rotate(-27deg) translate(18px, 2px);
     transform-origin: right;
     transition-duration: 0.5s;
   }
