@@ -86,6 +86,7 @@ a {
 }
 .header-wrapper .hamburger-menu {
   display: none;
+  cursor: pointer;
   width: 35px;
   height: 35px;
   position: relative;
@@ -433,11 +434,18 @@ a {
 .hamburger-container > .hamburger-menu-inside > nav > .hamburger-nav > li > a {
   font-weight: 700;
 }
+@media screen and (max-width: 376px) {
+  .hamburger-container > .hamburger-menu-inside > nav > .hamburger-nav > li > a {
+    font-weight: 400;
+    font-size: 0.8em;
+  }
+}
 
 .change-button {
   width: 35px;
   height: 35px;
   position: relative;
+  cursor: pointer;
 }
 .change-button > span {
   position: absolute;

@@ -11,7 +11,7 @@
 
   .hamburger-menu {
     display: none;
-
+    cursor: pointer;
     @media screen and (max-width: 1023px) {
       display: block;
     }
@@ -331,6 +331,7 @@
   display: none;
   max-width: 100vw;
   position: relative;
+
   > .hamburger-menu-inside {
     width: 30%;
     min-height: 600px;
@@ -347,6 +348,10 @@
         padding: $spacing 0;
         > a {
           font-weight: 700;
+          @media screen and (max-width: 376px) {
+            font-weight: 400;
+            font-size: 0.8em;
+          }
         }
       }
     }
@@ -357,6 +362,7 @@
   width: 35px;
   height: 35px;
   position: relative;
+  cursor: pointer;
   > span {
     position: absolute;
     top: 10px;
@@ -395,3 +401,4 @@
     background-color: $primary_text_color;
   }
 }
+
