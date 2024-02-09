@@ -409,6 +409,7 @@ a {
 }
 .my-design-works > .design-items > img {
   width: 100%;
+  border-radius: 1em;
 }
 
 .hamburger-container {
@@ -481,4 +482,20 @@ a {
   height: 3px;
   width: 100%;
   background-color: #000000;
+}
+
+.photography-container {
+  background-color: #fbf7f4;
+  max-width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 40vh;
+  flex-direction: row-reverse;
+}
+.photography-container > img {
+  max-width: 20%;
+}
+.photography-container > .photography-intro {
+  padding: 3em;
 }

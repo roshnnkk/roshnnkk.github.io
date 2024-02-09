@@ -43,12 +43,16 @@
             <button type="button">get in touch</button>
           </div>
 
-          <div class="hamburger-menu " id="hamburger-btn" onclick="openHamburgerMenu()">
+          <div
+            class="hamburger-menu"
+            id="hamburger-btn"
+            onclick="openHamburgerMenu()"
+          >
             <span></span>
           </div>
         </section>
-        <div class="hamburger-container"id="hamburger-show" >
-          <div class="hamburger-menu-inside"   >
+        <div class="hamburger-container" id="hamburger-show">
+          <div class="hamburger-menu-inside">
             <nav>
               <ul class="hamburger-nav">
                 <li><a href="-">home</a></li>
@@ -67,7 +71,7 @@
             <h2>web Developer , creative Designer & Photographer</h2>
             <p>
               Hi, my name is Roshanak and I am a front-end web developer with
-              over 10 years of experience in modern web development practices. I
+              over 2 years of experience in modern web development practices. I
               am passionate about creating beautiful websites that are easy to
               use and can be accessed by anyone.
             </p>
@@ -149,12 +153,12 @@
           >
             Here you can see some of my projects as a front-end developer
           </p>
-          <img src="./assets/mywork1.png" alt="my works" />
+          <img src="./assets/mywork1.png" alt="my works" id="my-work" />
           <div class="buttons-changing">
-            <button class="back-btn" type="button">
+            <button class="back-btn" type="button" id="back-btn">
               <i class="fa-solid fa-caret-left"></i>
             </button>
-            <button class="next-btn" type="button">
+            <button class="next-btn" type="button" id="next-btn">
               <i class="fa-solid fa-caret-right"></i>
             </button>
           </div>
@@ -210,6 +214,19 @@
           />
         </div>
       </section>
+      <div class="photography-container">
+        <img src="./assets/6d.png">
+        <div class="photography-intro">
+          <h4>My photography journey</h4>
+
+          <p>
+            I started my journey as a Photographer 6 years ago. I studied
+            photography in Tehran University. I was so passionate about learning
+            more and experiencing new styles. My favorite genres
+            are advertising, food, and micro photography.
+          </p>
+        </div>
+      </div>
     </main>
 
     <script src="wow.min.js"></script>

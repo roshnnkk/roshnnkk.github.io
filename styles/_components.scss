@@ -323,6 +323,7 @@
 
     > img {
       width: 100%;
+      border-radius: $spacing;
     }
   }
 }
@@ -402,3 +403,21 @@
   }
 }
 
+.photography-container{
+
+  background-color: $light_bg_color;
+  @include parent_width;
+  @include centered(flex-start);
+  min-height: 40vh;
+  flex-direction: row-reverse;
+  >img{
+    max-width: 20%;
+
+
+  }
+  >.photography-intro{
+
+
+    padding: $spacing * 3;
+  }
+}
