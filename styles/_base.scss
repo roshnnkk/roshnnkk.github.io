@@ -14,6 +14,7 @@ h6 {
   font-family: "Belleza", sans-serif;
   font-size: clamp(1rem, 1rem + 2vw, 3rem);
   text-transform: capitalize;
+  padding-bottom: $spacer;
 
   @media screen and (max-width: 1293px) {
     font-size: clamp(1rem, 1rem + 1vw, 3rem);

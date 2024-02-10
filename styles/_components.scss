@@ -68,6 +68,10 @@
 
       > li > a {
         color: $primary_text_color;
+        &:hover {
+          color: $light_green_color;
+          transition: 0.4s;
+        }
       }
     }
   }
@@ -149,19 +153,21 @@
 
 .more-info {
   background-color: $dark_bg_color;
-  min-height: 50vh;
+
   max-width: 100%;
-  @include centered;
+  @include centered(flex-start);
   flex-direction: row-reverse;
   > .more-text {
-    padding: 0 $spacing * 3;
+    padding: $spacing * 3 $spacing * 3;
+    max-width: 80%;
+    text-align: right;
 
     @media screen and (max-width: 502px) {
       padding: $spacing $spacing * 3;
     }
   }
   > .right-design {
-    max-width: 20%;
+    max-width: 15%;
 
     > img {
       width: 100%;
@@ -172,7 +178,6 @@
 .container3 {
   background-color: $light_bg_color;
   text-align: center;
-  min-height: 60vh;
 
   > div {
     padding: $large_spacing $spacing 0 $spacing;
@@ -279,7 +284,6 @@
   background-color: $light_bg_color;
   @include parent_width;
   @include centered(flex-start);
-  min-height: 40vh;
 
   .graphic-intro {
     max-width: 80%;
@@ -403,21 +407,84 @@
   }
 }
 
-.photography-container{
-
+.photography-container {
   background-color: $light_bg_color;
   @include parent_width;
   @include centered(flex-start);
-  min-height: 40vh;
+
   flex-direction: row-reverse;
-  >img{
-    max-width: 20%;
-
-
+  > img {
+    max-width: 15%;
   }
-  >.photography-intro{
-
-
+  > .photography-intro {
     padding: $spacing * 3;
+    max-width: 80%;
+    text-align: right;
+  }
+}
+
+.container-photography {
+  @include parent_width();
+  background-color: $light_green_color;
+  position: relative;
+  .design-left {
+    width: 20%;
+    position: absolute;
+    top: -10px;
+    left: $large_spacing;
+    z-index: 1;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  .design-bottom {
+    width: 20%;
+    position: absolute;
+    right: $spacing;
+    bottom: 0;
+  }
+
+  > .images-and-texts {
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    @include marginAuto();
+    align-items: center;
+    justify-content: center;
+    padding: $spacing * 3;
+    grid-gap: $spacing;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+
+      text-align: center;
+    }
+
+    .me {
+      width: 90%;
+      border-radius: 40% 40% 0 0;
+      object-fit: contain;
+      border: 10px solid $dark_bg_color;
+      z-index: 2;
+
+      @media screen and (max-width: 768px) {
+        width: 50%;
+        @include marginAuto();
+      }
+    }
+    > .texts-photography {
+      width: 100%;
+      > .btn-me {
+        @include button;
+        &:hover{
+          @include hover;
+        }
+       
+      }
+      >p{
+        padding-bottom: $spacing * 2;
+      }
+    }
   }
 }

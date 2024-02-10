@@ -63,11 +63,8 @@ document.getElementById("back-btn").addEventListener("click", function () {
   if (currentImg > 0) {
     currentImg--;
     newImg.src = images[currentImg].img;
-  }else{
+  } else {
     currentImg = images.length - 1;
     newImg.src = images[currentImg].img;
   }
-
-
-
 });

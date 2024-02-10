@@ -34,6 +34,7 @@ h6 {
   font-family: "Belleza", sans-serif;
   font-size: clamp(1rem, 1rem + 2vw, 3rem);
   text-transform: capitalize;
+  padding-bottom: 0.5em;
 }
 @media screen and (max-width: 1293px) {
   h1,
@@ -145,6 +146,10 @@ a {
 .header-wrapper > nav > .header-nav > li > a {
   color: #000000;
 }
+.header-wrapper > nav > .header-nav > li > a:hover {
+  color: #C3E2C2;
+  transition: 0.4s;
+}
 .header-wrapper > .header-links {
   display: flex;
   justify-content: center;
@@ -243,15 +248,16 @@ a {
 
 .more-info {
   background-color: #f5dfd3;
-  min-height: 50vh;
   max-width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row-reverse;
 }
 .more-info > .more-text {
-  padding: 0 3em;
+  padding: 3em 3em;
+  max-width: 80%;
+  text-align: right;
 }
 @media screen and (max-width: 502px) {
   .more-info > .more-text {
@@ -259,7 +265,7 @@ a {
   }
 }
 .more-info > .right-design {
-  max-width: 20%;
+  max-width: 15%;
 }
 .more-info > .right-design > img {
   width: 100%;
@@ -268,7 +274,6 @@ a {
 .container3 {
   background-color: #fbf7f4;
   text-align: center;
-  min-height: 60vh;
 }
 .container3 > div {
   padding: 4em 1em 0 1em;
@@ -363,7 +368,6 @@ a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  min-height: 40vh;
 }
 .container-graphic .graphic-intro {
   max-width: 80%;
@@ -490,12 +494,88 @@ a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  min-height: 40vh;
   flex-direction: row-reverse;
 }
 .photography-container > img {
-  max-width: 20%;
+  max-width: 15%;
 }
 .photography-container > .photography-intro {
   padding: 3em;
+  max-width: 80%;
+  text-align: right;
+}
+
+.container-photography {
+  max-width: 100vw;
+  background-color: #C3E2C2;
+  position: relative;
+}
+.container-photography .design-left {
+  width: 20%;
+  position: absolute;
+  top: -10px;
+  left: 4em;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .container-photography .design-left {
+    display: none;
+  }
+}
+.container-photography .design-bottom {
+  width: 20%;
+  position: absolute;
+  right: 1em;
+  bottom: 0;
+}
+.container-photography > .images-and-texts {
+  max-width: 80%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  padding: 3em;
+  grid-gap: 1em;
+}
+@media screen and (max-width: 768px) {
+  .container-photography > .images-and-texts {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+}
+.container-photography > .images-and-texts .me {
+  width: 90%;
+  border-radius: 40% 40% 0 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border: 10px solid #f5dfd3;
+  z-index: 2;
+}
+@media screen and (max-width: 768px) {
+  .container-photography > .images-and-texts .me {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.container-photography > .images-and-texts > .texts-photography {
+  width: 100%;
+}
+.container-photography > .images-and-texts > .texts-photography > .btn-me {
+  color: #ffffff;
+  background-color: #282d27;
+  padding: 1em;
+  border-radius: 0.5em;
+  border: 2px solid #282d27;
+}
+.container-photography > .images-and-texts > .texts-photography > .btn-me:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #282d27;
+  transition: 0.4s;
+}
+.container-photography > .images-and-texts > .texts-photography > p {
+  padding-bottom: 2em;
 }
