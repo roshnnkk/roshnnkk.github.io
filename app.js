@@ -68,3 +68,82 @@ document.getElementById("back-btn").addEventListener("click", function () {
     newImg.src = images[currentImg].img;
   }
 });
+
+////////add photos to html//////
+
+const foodImages = [
+  {
+    img: "assets/food/1.jpg",
+    title: "food photography",
+    text: "advertising project for restaurant",
+  },
+
+  {
+    img: "assets/food/2.jpg",
+    title: "food photography",
+    text: "advertising project for restaurant",
+  },
+
+  {
+    img: "assets/food/3.jpg",
+    title: "food photography",
+    text: "advertising project for restaurant",
+  },
+
+  {
+    img: "assets/food/4.jpg",
+    title: "advertising photography",
+    text: "advertising project for Like cafe",
+  },
+  {
+    img: "assets/food/7.jpg",
+    title: "advertising photography",
+    text: "advertising project for like cafe",
+  },
+  {
+    img: "assets/food/16.jpg",
+    title: "food photography",
+    text: "advertising project for chill cafe",
+  },
+  {
+    img: "assets/food/10.jpg",
+    title: "food photography",
+    text: "advertising project for chill cafe",
+  },
+  {
+    img: "assets/food/11.jpg",
+    title: "food photography",
+    text: "advertising project for restaurant",
+  },
+  {
+    img: "assets/food/12.jpg",
+    title: "food photography",
+    text: "advertising project for restaurant",
+  },
+  {
+    img: "assets/food/13 (2).jpg",
+    title: "food photography",
+    text: "advertising project for like cafe",
+  },
+];
+
+function addPhotos() {
+  document.getElementById("food-photography-alternative").innerHTML = foodImages
+    .map(
+      (image) => `
+<figure>
+<img src="${image.img}" class="responsive img1" />
+<figcaption class="overlay">
+  <h5>${image.title}</h5>
+  <p>${image.text}</p>
+</figcaption>
+</figure>
+
+`
+    )
+    .join("");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  addPhotos();
+});

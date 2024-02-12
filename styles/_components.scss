@@ -477,7 +477,7 @@
       width: 100%;
       > .btn-me {
         @include button;
-        
+
         &:hover {
           @include hover;
         }
@@ -514,6 +514,19 @@
     > img {
       width: 100%;
       object-fit: contain;
+
+      // &::after {
+      //   display: block;
+      //   content: "";
+      //   width: 100%;
+      //   height: 100%;
+      //   background-color: black;
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   right: 0;
+      //   bottom: 0;
+      // }
     }
 
     .img1 {
@@ -562,7 +575,6 @@
 
 .photography-items {
   .food-photography-alternative {
-   
     max-width: 80%;
     @include marginAuto();
     display: grid;
@@ -570,19 +582,44 @@
     padding: $spacing * 3;
     justify-content: center;
     grid-template-columns: repeat(2, 1fr);
-    
+
     @media screen and (min-width: 769px) {
       display: none;
-   
     }
 
-    @media screen and (max-width:426px) {
+    @media screen and (max-width: 426px) {
       grid-template-columns: repeat(1, 1fr);
-      
     }
-    > img {
+    > figure > img {
       width: 100%;
       object-fit: contain;
+      position: relative;
+    }
+
+    > figure {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.353);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 100%;
+        transition: 0.4s;
+        text-align: center;
+        padding: $spacing;
+        >h5,p{
+          color: $light_primary_color;
+
+        }
+      }
+
+      &:hover > img ~ figcaption {
+        bottom: 0;
+      }
     }
   }
 }
