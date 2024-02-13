@@ -55,8 +55,10 @@ document.getElementById("next-btn").addEventListener("click", function () {
   if ((currentImg >= 0, currentImg < images.length - 1)) {
     currentImg++;
     newImg.src = images[currentImg].img;
-  } else if (currentImg >= images.length - 1) currentImg = 0;
-  newImg.src = images[currentImg].img;
+  } else if (currentImg >= images.length - 1) {
+    currentImg = 0;
+    newImg.src = images[currentImg].img;
+  }
 });
 
 document.getElementById("back-btn").addEventListener("click", function () {
@@ -146,4 +148,75 @@ function addPhotos() {
 
 document.addEventListener("DOMContentLoaded", function () {
   addPhotos();
+});
+
+////////////add buttons for comments////
+
+const NewComments = [
+  {
+    img: "assets/users/p1.jpg",
+    comments: `“Working with you was an absolute delight! Your attention to
+  detail in web development and your eye for capturing stunning
+  photographs truly set you apart. Thank you for making our project
+  shine!”`,
+    name: "Orson Ward",
+  },
+
+  {
+    img: "assets/users/p2.jpg",
+    comments: `“As a fellow developer, collaborating with you was a breeze. Your code is clean, efficient, and well-organized. Plus, your photography skills added a creative touch to our team’s portfolio. Looking forward to more projects together!”`,
+    name: "June Booth",
+  },
+  {
+    img: "assets/users/p3.jpg",
+    comments: `“Your ability to seamlessly blend your technical expertise with your artistic flair is remarkable. Our website wouldn’t be the same without your contributions. Kudos for being a reliable and innovative team member!”`,
+    name: "Cole Cooper",
+  },
+  {
+    img: "assets/users/p4.jpg",
+    comments: `“Your patience during the shoot and the way you captured our brand’s essence exceeded our expectations. And when you switched gears to web development, you brought the same dedication. Truly a versatile talent!”`,
+    name: "Tyler Lawson",
+  },
+  {
+    img: "assets/users/p5.jpg",
+    comments: `“ Your ability to translate our vision into a functional website was impressive. And when you picked up the camera for our product photoshoot, the results were nothing short of stunning. Looking forward to future projects!”`,
+    name: "Jasper Thompson",
+  },
+];
+
+const newImage = document.getElementById("user-img");
+const newComment = document.getElementById("user-cm");
+const newName = document.getElementById("user-name");
+
+function userData(user) {
+  newImage.src = user.img;
+  newComment.textContent = user.comments;
+  newName.textContent = user.name;
+}
+document.addEventListener("DOMContentLoaded", function () {
+  const userOne = NewComments[0];
+  userData(userOne);
+});
+
+let currentUser = 0;
+
+////button actions///
+document.getElementById("next-btn-cm").addEventListener("click", function () {
+  if ((currentUser >= 0, currentUser < NewComments.length - 1)) {
+    currentUser++;
+    userData(NewComments[currentUser]);
+  } else if (currentUser >= NewComments.length - 1) {
+    currentUser = 0;
+    userData(NewComments[currentUser]);
+  }
+});
+
+document.getElementById("back-btn-cm").addEventListener("click", function () {
+  if (currentUser > 0) {
+    currentUser--;
+    userData(NewComments[currentUser]);
+  } else {
+    currentUser = NewComments.length - 1;
+    userData(NewComments[currentUser]);
+  }
 });

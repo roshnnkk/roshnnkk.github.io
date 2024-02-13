@@ -29,7 +29,7 @@
               <li><a href="#intro-container">home</a></li>
               <li><a href="#myWorks-container">work</a></li>
               <li><a href="#more-info">profile</a></li>
-              <li><a href="-">contact</a></li>
+              <li><a href="#get-in-touch">contact</a></li>
             </ul>
           </nav>
           <div class="header-links">
@@ -40,7 +40,7 @@
               ><i class="fa-brands fa-github"></i
             ></a>
             <a href="."><i class="fa-brands fa-youtube"></i></a>
-            <button type="button">get in touch</button>
+            <button type="button"><a href="mailto:roshanakabd78@gmail.com">get in touch</a></button>
           </div>
 
           <div
@@ -58,7 +58,7 @@
                 <li><a class="home" href="#intro-container">home</a></li>
                 <li><a href="#myWorks-container">work</a></li>
                 <li><a href="#more-info">profile</a></li>
-                <li><a href="-">contact</a></li>
+                <li><a href="#get-in-touch">contact</a></li>
               </ul>
             </nav>
           </div>
@@ -66,7 +66,10 @@
       </header>
 
       <div class="intro-wrapper">
-        <section class="intro-container wow animate__animated animate__fadeIn" id="intro-container">
+        <section
+          class="intro-container wow animate__animated animate__fadeIn"
+          id="intro-container"
+        >
           <div class="introduce">
             <h2>web Developer , creative Designer & Photographer</h2>
             <p>
@@ -75,7 +78,7 @@
               am passionate about creating beautiful websites that are easy to
               use and can be accessed by anyone.
             </p>
-            <button type="button">when do we begin</button>
+            <button type="button"><a href="#get-in-touch">when do we begin</a></button>
           </div>
 
           <img src="./assets/1.jpg" />
@@ -214,7 +217,7 @@
           />
         </div>
       </section>
-      <div class="photography-container ">
+      <div class="photography-container">
         <img src="./assets/6d.png" />
 
         <div class="photography-intro">
@@ -233,14 +236,18 @@
         </div>
       </div>
 
-      <div class="container-photography ">
+      <div class="container-photography">
         <img src="./assets/1d.png" class="design-bottom" />
         <div class="images-and-texts wow animate__animated animate__fadeIn">
           <img src="./assets/me2.JPG" class="me" />
           <img src="./assets/4d.png" class="design-left" />
           <div class="texts-photography">
-            <h4>I am Roshanak</h4>
-            <p>
+            <h4 class="wow animate__animated animate__fadeInDown">
+              I am Roshanak
+            </h4>
+            <p
+              class="wow animate__animated animate__fadeInDown animate__delay-1s"
+            >
               I've worked as a freelancer photographer for over 4 years and I
               have a lot of experience.Also I worked as a member of an amazing
               advertising team.I am sociable and I love working in group.
@@ -252,8 +259,12 @@
 
       <div class="photography-items">
         <div class="photography-texts">
-          <h4>some of my photoshoots</h4>
-          <p>
+          <h4 class="wow animate__animated animate__fadeInDown">
+            some of my photoshoots
+          </h4>
+          <p
+            class="wow animate__animated animate__fadeInDown animate__delay-1s"
+          >
             Food photography is one of my favorites and I have done quite a lot
             of work
           </p>
@@ -274,6 +285,57 @@
           <img src="assets/food/12.JPG" class="responsive img12" />
           <img src="assets/food/13 (2).JPG" class="responsive img13" />
         </div>
+      </div>
+
+      <div class="people-comments">
+        <p class="wow animate__animated animate__fadeInDown">
+          what people think about working with me
+        </p>
+        <section class="comments-container">
+          <button type="button" id="back-btn-cm">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <div class="comments">
+            <i class="fa-regular fa-comment"></i>
+            <img src="" id="user-img" />
+            <p
+              class="wow animate__animated animate__fadeInDown"
+              id="user-cm"
+            ></p>
+            <p
+              class="wow animate__animated animate__fadeInDown"
+              id="user-name"
+            ></p>
+          </div>
+          <button type="button" id="next-btn-cm">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </section>
+      </div>
+
+      <div class="contact-wrapper">
+        <img src="assets/8d.png" />
+        <section class="contact-container">
+          <div class="images">
+            <img class="d7" src="assets/7d.png" />
+            <img class="d9" src="assets/9d.png" />
+          </div>
+          <div class="contact-texts" id="get-in-touch">
+            <h4>Wanna work with me?</h4>
+            <p>
+              If you’re open to joining forces, sharing ideas, or embarking on
+              mystical quests, please consider sharing your email address below.
+              Together, we can weave spells, unravel mysteries, and create
+              wonders that resonate across realms. Enter your email here and I
+              get connected with you
+            </p>
+            <form>
+              <input id="email" type="email" placeholder="Email address" />
+              <label for="email" class="input-label"></label>
+            </form>
+            <button class="submit-btn" type="submit">Let's do this</button>
+          </div>
+        </section>
       </div>
     </main>
 
