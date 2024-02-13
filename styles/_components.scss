@@ -84,12 +84,12 @@
     }
     > button {
       @include button;
-      >a{
+      > a {
         color: $light_primary_color;
       }
       &:hover {
         @include hover;
-        >a{
+        > a {
           color: $primary_text_color;
         }
       }
@@ -140,16 +140,14 @@
 
       > button {
         @include button;
-        >a{
+        > a {
           color: $light_primary_color;
-          
         }
         &:hover {
-          >a{
+          > a {
             color: $primary_text_color;
           }
           @include hover;
-          
         }
 
         @media screen and (max-width: 768px) {
@@ -491,9 +489,17 @@
       width: 100%;
       > .btn-me {
         @include button;
-
+        a {
+          color: $light_primary_color;
+        }
+        @media screen and (max-width: 769px) {
+          font-size: 10px;
+        }
         &:hover {
           @include hover;
+          > a {
+            color: $primary_text_color;
+          }
         }
       }
       > p {
@@ -721,20 +727,34 @@
     flex-direction: row-reverse;
     padding: $spacing * 3;
 
-    .contact-texts{
+    @media screen and (max-width: 998px) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .contact-texts {
       max-width: 50%;
-      .submit-btn{
-        @include button();
+
+      @media screen and (max-width: 998px) {
+        max-width: fit-content;
       }
 
-      >form{
-padding:$spacing 0 ;
->input{
+      .submit-btn {
+        @include button();
+        @media screen and (max-width: 769px) {
+          font-size: 10px;
+        }
+      }
 
-  border: none;
-  padding: $spacer;
-}
-
+      > form {
+        padding: $spacing 0;
+        > input {
+          border: none;
+          padding: $spacer;
+          &:focus {
+            outline: none;
+          }
+        }
       }
     }
 
@@ -743,6 +763,10 @@ padding:$spacing 0 ;
         max-width: 100%;
         position: relative;
         z-index: 2;
+
+        @media screen and (max-width: 998px) {
+          max-width: 50%;
+        }
       }
       .d9 {
         max-width: 25%;
@@ -750,6 +774,9 @@ padding:$spacing 0 ;
         top: 50px;
         right: 120px;
         z-index: 1;
+        @media screen and (max-width: 998px) {
+          display: none;
+        }
       }
     }
   }

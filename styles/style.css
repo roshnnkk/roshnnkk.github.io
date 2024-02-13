@@ -582,11 +582,22 @@ a {
   border-radius: 0.5em;
   border: 2px solid #282d27;
 }
+.container-photography > .images-and-texts > .texts-photography > .btn-me a {
+  color: #ffffff;
+}
+@media screen and (max-width: 769px) {
+  .container-photography > .images-and-texts > .texts-photography > .btn-me {
+    font-size: 10px;
+  }
+}
 .container-photography > .images-and-texts > .texts-photography > .btn-me:hover {
   background-color: #ffffff;
   color: #000000;
   border: 2px solid #282d27;
   transition: 0.4s;
+}
+.container-photography > .images-and-texts > .texts-photography > .btn-me:hover > a {
+  color: #000000;
 }
 .container-photography > .images-and-texts > .texts-photography > p {
   padding-bottom: 2em;
@@ -821,8 +832,20 @@ a {
   flex-direction: row-reverse;
   padding: 3em;
 }
+@media screen and (max-width: 998px) {
+  .contact-wrapper > .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 .contact-wrapper > .contact-container .contact-texts {
   max-width: 50%;
+}
+@media screen and (max-width: 998px) {
+  .contact-wrapper > .contact-container .contact-texts {
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
 }
 .contact-wrapper > .contact-container .contact-texts .submit-btn {
   color: #ffffff;
@@ -831,6 +854,11 @@ a {
   border-radius: 0.5em;
   border: 2px solid #282d27;
 }
+@media screen and (max-width: 769px) {
+  .contact-wrapper > .contact-container .contact-texts .submit-btn {
+    font-size: 10px;
+  }
+}
 .contact-wrapper > .contact-container .contact-texts > form {
   padding: 1em 0;
 }
@@ -838,10 +866,18 @@ a {
   border: none;
   padding: 0.5em;
 }
+.contact-wrapper > .contact-container .contact-texts > form > input:focus {
+  outline: none;
+}
 .contact-wrapper > .contact-container > .images .d7 {
   max-width: 100%;
   position: relative;
   z-index: 2;
+}
+@media screen and (max-width: 998px) {
+  .contact-wrapper > .contact-container > .images .d7 {
+    max-width: 50%;
+  }
 }
 .contact-wrapper > .contact-container > .images .d9 {
   max-width: 25%;
@@ -849,4 +885,9 @@ a {
   top: 50px;
   right: 120px;
   z-index: 1;
+}
+@media screen and (max-width: 998px) {
+  .contact-wrapper > .contact-container > .images .d9 {
+    display: none;
+  }
 }
