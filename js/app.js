@@ -75,7 +75,7 @@ document.getElementById("back-btn").addEventListener("click", function () {
 
 const foodImages = [
   {
-    img: "assets/food/1.jpg",
+    img: (src = "assets/food/1.jpg"),
     title: "food photography",
     text: "advertising project for restaurant",
   },
@@ -223,15 +223,13 @@ document.getElementById("back-btn-cm").addEventListener("click", function () {
 
 //////////form actions///
 
-
-
 function addSubmit() {
   var email = document.getElementById("email");
   var filter =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (!filter.test(email.value)) {
     alert("Please provide a valid email address");
-    document.getElementById("email").value='';
+    document.getElementById("email").value = "";
     return false;
   }
 
