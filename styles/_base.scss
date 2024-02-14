@@ -30,10 +30,6 @@ button {
   letter-spacing: 1.5px;
   cursor: pointer;
   background-color: transparent;
-
-
-
-
 }
 
 p {
@@ -44,6 +40,12 @@ p {
   }
 }
 
-a{
+a {
   color: $primary_text_color;
+}
+
+footer {
+  a {
+    text-transform: capitalize;
+  }
 }

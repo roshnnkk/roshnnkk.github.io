@@ -735,6 +735,14 @@
     .contact-texts {
       max-width: 50%;
 
+      >.thank-box{
+        max-width: 30%;
+        padding: 0.5em;
+        background-color: azure;
+        margin-bottom: $spacer;
+        border-radius: $spacer;
+        display: none;
+      }
       @media screen and (max-width: 998px) {
         max-width: fit-content;
       }
@@ -750,7 +758,7 @@
         padding: $spacing 0;
         > input {
           border: none;
-          padding: $spacer;
+          padding: $spacing;
           &:focus {
             outline: none;
           }
@@ -777,6 +785,92 @@
         @media screen and (max-width: 998px) {
           display: none;
         }
+      }
+    }
+  }
+}
+
+.footer-wrapper {
+  @include parent_width();
+  min-height: 40vh;
+  background-color: $light_bg_color;
+  text-align: center;
+  > .footer-container {
+    max-width: 80%;
+    @include marginAuto();
+    padding: $spacing * 3;
+
+    > .part1-of-footer {
+      padding-bottom: $spacing;
+      border-bottom: $spacer solid $dark_bg_color;
+
+      .footer-list > .footer-items {
+        @include centered();
+        gap: $spacing;
+        @media screen and (max-width:426px) {
+          flex-wrap: wrap;
+        }
+
+        > li {
+          a {
+            position: relative;
+            &::after {
+              content: "";
+              display: block;
+              height: 2px;
+              width: 100%;
+              background-color: black;
+              bottom: -2px;
+              left: 0;
+              right: 0;
+              position: absolute;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .footer-end{
+@include centered(space-between);
+@include marginAuto();
+max-width: 80%;
+padding: 0  $spacing * 3  $spacer  $spacing * 3;
+>p{
+  font-size: $spacing;
+  cursor: pointer;
+  @media screen and (max-width:426px) {
+    font-size: 10px;
+  }
+}
+  }
+}
+
+.footer-container {
+  > .footer-links {
+    padding-top: $spacing * 2;
+    > a > i {
+      padding: 0 2px;
+      font-size: 1.3em;
+    }
+  }
+
+  .part2-of-footer {
+    padding: $spacing 0;
+    @include centered();
+    gap: $spacing;
+    border-bottom: $spacer solid $dark_bg_color;
+    @media screen and (max-width: 1024px) {
+      flex-wrap: wrap;
+    }
+    > img {
+      max-width: 15%;
+      @media screen and (max-width: 1024px) {
+        max-width: 25%;
+      }
+      @media  screen and (max-width: 768px) {
+        max-width: 30%;
+        
       }
     }
   }
