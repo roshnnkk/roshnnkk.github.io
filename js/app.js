@@ -75,13 +75,13 @@ document.getElementById("back-btn").addEventListener("click", function () {
 
 const foodImages = [
   {
-    img: (src = "assets/food/1.jpg"),
+    img: "./assets/food/1.jpg",
     title: "food photography",
     text: "advertising project for restaurant",
   },
 
   {
-    img: "assets/food/2.jpg",
+    img: "../assets/food/2.jpg",
     title: "food photography",
     text: "advertising project for restaurant",
   },
