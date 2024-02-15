@@ -854,6 +854,17 @@ footer a {
   display: none;
 }
 @media screen and (max-width: 998px) {
+  .contact-wrapper > .contact-container .contact-texts > .thank-box {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 426px) {
+  .contact-wrapper > .contact-container .contact-texts > .thank-box > p {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 998px) {
   .contact-wrapper > .contact-container .contact-texts {
     max-width: -moz-fit-content;
     max-width: fit-content;
@@ -865,6 +876,12 @@ footer a {
   padding: 1em;
   border-radius: 0.5em;
   border: 2px solid #282d27;
+}
+.contact-wrapper > .contact-container .contact-texts .submit-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #282d27;
+  transition: 0.4s;
 }
 @media screen and (max-width: 769px) {
   .contact-wrapper > .contact-container .contact-texts .submit-btn {
@@ -926,7 +943,7 @@ footer a {
   align-items: center;
   gap: 1em;
 }
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 671px) {
   .footer-wrapper > .footer-container > .part1-of-footer .footer-list > .footer-items {
     flex-wrap: wrap;
   }

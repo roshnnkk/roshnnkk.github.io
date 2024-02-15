@@ -735,13 +735,21 @@
     .contact-texts {
       max-width: 50%;
 
-      >.thank-box{
+      > .thank-box {
         max-width: 30%;
         padding: 0.5em;
         background-color: azure;
         margin-bottom: $spacer;
         border-radius: $spacer;
         display: none;
+        @media screen and (max-width: 998px) {
+          @include marginAuto();
+        }
+       >p{
+        @media screen and (max-width: 426px) {
+          font-size: 10px;
+        }
+       }
       }
       @media screen and (max-width: 998px) {
         max-width: fit-content;
@@ -749,8 +757,12 @@
 
       .submit-btn {
         @include button();
+        &:hover{
+          @include hover();
+        }
         @media screen and (max-width: 769px) {
           font-size: 10px;
+         
         }
       }
 
@@ -807,7 +819,7 @@
       .footer-list > .footer-items {
         @include centered();
         gap: $spacing;
-        @media screen and (max-width:426px) {
+        @media screen and (max-width: 671px) {
           flex-wrap: wrap;
         }
 
@@ -830,19 +842,19 @@
       }
     }
   }
-  
-  .footer-end{
-@include centered(space-between);
-@include marginAuto();
-max-width: 80%;
-padding: 0  $spacing * 3  $spacer  $spacing * 3;
->p{
-  font-size: $spacing;
-  cursor: pointer;
-  @media screen and (max-width:426px) {
-    font-size: 10px;
-  }
-}
+
+  .footer-end {
+    @include centered(space-between);
+    @include marginAuto();
+    max-width: 80%;
+    padding: 0 $spacing * 3 $spacer $spacing * 3;
+    > p {
+      font-size: $spacing;
+      cursor: pointer;
+      @media screen and (max-width: 426px) {
+        font-size: 10px;
+      }
+    }
   }
 }
 
@@ -868,9 +880,8 @@ padding: 0  $spacing * 3  $spacer  $spacing * 3;
       @media screen and (max-width: 1024px) {
         max-width: 25%;
       }
-      @media  screen and (max-width: 768px) {
+      @media screen and (max-width: 768px) {
         max-width: 30%;
-        
       }
     }
   }
