@@ -26,19 +26,19 @@ function openHamburgerMenu() {
 
 const images = [
   {
-    img: (src = "assets/mywork1.png"),
+    img: (src = "assets/my work/mywork1.png"),
   },
 
   {
-    img: (src = "assets/mywork2.png"),
+    img: (src = "assets/my work/mywork2.png"),
   },
 
   {
-    img: (src = "assets/mywork3.png"),
+    img: (src = "assets/my work/mywork3.png"),
   },
 
   {
-    img: (src = "assets/mywork4.png"),
+    img: (src = "assets/my work/mywork4.png"),
   },
 ];
 
