@@ -81,24 +81,24 @@ const foodImages = [
   },
 
   {
-    img: "assets/food/2.jpg",
+    img: "assets/food/2.JPG",
     title: "food photography",
     text: "advertising project for restaurant",
   },
 
   {
-    img: "assets/food/3.jpg",
+    img: "assets/food/3.JPG",
     title: "food photography",
     text: "advertising project for restaurant",
   },
 
   {
-    img: "assets/food/4.jpg",
+    img: "assets/food/4.JPG",
     title: "advertising photography",
     text: "advertising project for Like cafe",
   },
   {
-    img: "assets/food/7.jpg",
+    img: "assets/food/7.JPG",
     title: "advertising photography",
     text: "advertising project for like cafe",
   },
@@ -108,22 +108,22 @@ const foodImages = [
     text: "advertising project for chill cafe",
   },
   {
-    img: "assets/food/10.jpg",
+    img: "assets/food/10.JPG",
     title: "food photography",
     text: "advertising project for chill cafe",
   },
   {
-    img: "assets/food/11.jpg",
+    img: "assets/food/11.JPG",
     title: "food photography",
     text: "advertising project for restaurant",
   },
   {
-    img: "assets/food/12.jpg",
+    img: "assets/food/12.JPG",
     title: "food photography",
     text: "advertising project for restaurant",
   },
   {
-    img: "assets/food/13 (2).jpg",
+    img: "assets/food/13 (2).JPG",
     title: "food photography",
     text: "advertising project for like cafe",
   },
