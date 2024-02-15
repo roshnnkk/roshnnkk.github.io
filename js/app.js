@@ -75,7 +75,7 @@ document.getElementById("back-btn").addEventListener("click", function () {
 
 const foodImages = [
   {
-    img: "assets/food/1.jpg",
+    img: "assets/food/1.JPG",
     title: "food photography",
     text: "advertising project for restaurant",
   },
@@ -103,7 +103,7 @@ const foodImages = [
     text: "advertising project for like cafe",
   },
   {
-    img: "assets/food/16.jpg",
+    img: "assets/food/16.JPG",
     title: "food photography",
     text: "advertising project for chill cafe",
   },
@@ -134,7 +134,7 @@ function addPhotos() {
     .map(
       (image) => `
 <figure>
-<img src="${image.img}" class="responsive img1" autocomplete="off"/>
+<img src="${image.img}" class="responsive img1" />
 <figcaption class="overlay">
   <h5>${image.title}</h5>
   <p>${image.text}</p>
