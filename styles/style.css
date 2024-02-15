@@ -275,6 +275,13 @@ footer a {
   max-width: 80%;
   text-align: right;
 }
+@media screen and (max-width: 769px) {
+  .more-info > .more-text {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
 @media screen and (max-width: 502px) {
   .more-info > .more-text {
     padding: 1em 3em;
@@ -282,6 +289,11 @@ footer a {
 }
 .more-info > .right-design {
   max-width: 15%;
+}
+@media screen and (max-width: 769px) {
+  .more-info > .right-design {
+    display: none;
+  }
 }
 .more-info > .right-design > img {
   width: 100%;
@@ -376,6 +388,7 @@ footer a {
   background-color: #ae9a70;
   padding: 0.2em 0.3em;
   border-radius: 50%;
+  color: #000000;
 }
 
 .container-graphic {
@@ -389,8 +402,22 @@ footer a {
   max-width: 80%;
   padding: 3em;
 }
+@media screen and (max-width: 769px) {
+  .container-graphic .graphic-intro {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
 .container-graphic > img {
   max-width: 10%;
+}
+@media screen and (max-width: 769px) {
+  .container-graphic > img {
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+  }
 }
 
 .my-design-works {
@@ -515,10 +542,22 @@ footer a {
 .photography-container > img {
   max-width: 15%;
 }
+@media screen and (max-width: 769px) {
+  .photography-container > img {
+    display: none;
+  }
+}
 .photography-container > .photography-intro {
   padding: 3em;
   max-width: 80%;
   text-align: right;
+}
+@media screen and (max-width: 769px) {
+  .photography-container > .photography-intro {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
 }
 
 .container-photography {
@@ -613,9 +652,12 @@ footer a {
   text-align: center;
 }
 .photography-items .photography-texts {
+  max-width: 80%;
   padding-top: 3em;
   padding-left: 3em;
   padding-right: 3em;
+  margin-left: auto;
+  margin-right: auto;
 }
 .photography-items .food-photography {
   max-width: calc(80% + 98px);

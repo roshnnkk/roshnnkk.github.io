@@ -174,12 +174,20 @@
     max-width: 80%;
     text-align: right;
 
+    @media screen and (max-width: 769px) {
+      @include marginAuto();
+      text-align: center;
+    }
+
     @media screen and (max-width: 502px) {
       padding: $spacing $spacing * 3;
     }
   }
   > .right-design {
     max-width: 15%;
+    @media screen and (max-width: 769px) {
+      display: none;
+    }
 
     > img {
       width: 100%;
@@ -289,6 +297,7 @@
     background-color: $secondary_button_color;
     padding: 0.2em 0.3em;
     border-radius: 50%;
+    color: $primary_text_color;
   }
 }
 
@@ -300,10 +309,19 @@
   .graphic-intro {
     max-width: 80%;
     padding: $spacing * 3;
+
+    @media screen and (max-width: 769px) {
+      @include marginAuto();
+      text-align: center;
+    }
   }
 
   > img {
     max-width: 10%;
+    @media screen and (max-width: 769px) {
+      @include marginAuto();
+      display: none;
+    }
   }
 }
 
@@ -427,11 +445,18 @@
   flex-direction: row-reverse;
   > img {
     max-width: 15%;
+    @media screen and (max-width: 769px) {
+      display: none;
+    }
   }
   > .photography-intro {
     padding: $spacing * 3;
     max-width: 80%;
     text-align: right;
+    @media screen and (max-width: 769px) {
+      @include marginAuto();
+      text-align: center;
+    }
   }
 }
 
@@ -514,9 +539,11 @@
   background-color: $dark_bg_color;
   text-align: center;
   .photography-texts {
+    max-width: 80%;
     padding-top: $spacing * 3;
     padding-left: $spacing * 3;
     padding-right: $spacing * 3;
+    @include marginAuto();
   }
   .food-photography {
     max-width: calc(80% + 98px);
@@ -745,11 +772,11 @@
         @media screen and (max-width: 998px) {
           @include marginAuto();
         }
-       >p{
-        @media screen and (max-width: 426px) {
-          font-size: 10px;
+        > p {
+          @media screen and (max-width: 426px) {
+            font-size: 10px;
+          }
         }
-       }
       }
       @media screen and (max-width: 998px) {
         max-width: fit-content;
@@ -757,12 +784,11 @@
 
       .submit-btn {
         @include button();
-        &:hover{
+        &:hover {
           @include hover();
         }
         @media screen and (max-width: 769px) {
           font-size: 10px;
-         
         }
       }
 
